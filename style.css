@@ -51,6 +51,7 @@ p {
   font-size: clamp(1.2rem, 1.2vw, 100rem);
   font-weight:400;
   text-align: center;
+  letter-spacing: 2px;
 
 }
 
