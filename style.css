@@ -311,7 +311,10 @@ footer a {
   .about { grid-template-columns: 1fr; } 
   .about img { padding-right: 0%;}
 
-  .about {
+
+}
+
+.about {
   display: flex;
   flex-direction: row;
   align-items: center;   /* Aligns them vertically in the center */
@@ -327,19 +330,4 @@ footer a {
 
 .about div {
   max-width: 40%;        /* Gives the text its own designated space */
-}
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the content */
-  text-align: center;
-  padding: 20px;
-}
-
-.about img {
-  max-width: 100%;    /* Ensures it never overflows the screen */
-  height: auto;       /* Keeps the original aspect ratio */
-  border-radius: 8px; /* Optional: rounds the corners slightly */
 }
