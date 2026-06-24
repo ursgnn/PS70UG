@@ -336,6 +336,6 @@ p {
   text-align: center;   /* Centers the actual text lines */
   max-width: 700px;     /* Prevents the text from stretching too wide across the screen */
   margin: 30px auto;    /* Centers the entire paragraph block on the page and adds vertical spacing */
-  font-size: 1.1rem;    /* Optional: slightly boosts readability */
+  font-size: 1.3rem;    /* Optional: slightly boosts readability */
   line-height: 1.6;     /* Optional: spaces out the lines nicely */
 }
