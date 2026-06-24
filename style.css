@@ -310,4 +310,22 @@ footer a {
 @media (max-width: 1000px) { 
   .about { grid-template-columns: 1fr; } 
   .about img { padding-right: 0%;}
+
+  .about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;   /* Aligns them vertically in the center */
+  justify-content: center;
+  gap: 30px;             /* Puts a nice gap between the image and text */
+  padding: 40px;
+}
+
+.about img {
+  max-width: 50%;        /* Takes up at most half the screen width */
+  height: auto;          /* Prevents stretching */
+}
+
+.about div {
+  max-width: 40%;        /* Gives the text its own designated space */
+}
 }
