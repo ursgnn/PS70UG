@@ -340,3 +340,7 @@ p {
   line-height: 1.6;     /* Optional: spaces out the lines nicely */
 }
 
+.big-image {
+    width: 600px;
+    height: auto;
+}
