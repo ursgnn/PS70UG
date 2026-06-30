@@ -1,45 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>See config.js</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
-  </head>
+</head>
 
-  <nav>
-    <a id="home" href="./index.html">Home</a>
-    <a href="./index.html#final-project">Work</a>
-    <a href="./about.html">About</a>
-  </nav>
+<body>
 
-	<body>
-		<section id="hero">
-			<h1>PS70: Introduction to Digital Fabrication</h1>
-			<h2>Work by <span id="student-name"></span></h2>
-		</section>
+    <nav>
+        <a id="home" href="./index.html">Home</a>
+        <a href="./index.html#final-project">Work</a>
+        <a href="./about.html">About</a>
+    </nav>
 
-		<section id="final-project">
-      <!-- Put an image or video of your final project here when it's complete! -->
-		</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>PS70: Introduction to Digital Fabrication</h1>
+            <h2>Work by <span id="student-name"></span></h2>
 
-		<section id="work">
-			<a href="./01_intro/index.html">Week 1: Brainstorming</a>
-			<a href="./02_2Ddesign/index.html">Week 2: 2D/3D Design</a>
-			<a href="./03_fabrication/index.html">Week 3: Fabrication</a>
-			<a href="./04_microcontroller/">Week 4: Programming</a>
-			<a href="./05_3Dprinting/index.html">Week 5: 3D Printing</a>
-			<a href="./06_inputs/index.html">Week 6: Inputs</a>
-			<a href="./07_outputs/index.html">Week 7: Outputs</a>
-			<a href="./08_cnc/index.html">Week 8: CNC</a>
-			<a href="./09_networking/index.html">Week 9: Networking</a>
-			<a href="./10_machine/index.html">Week 10: Machine Building</a>
-			<a href="./13_finalproject/index.html">Final Project</a>
-		</section>
-	</body>
+            <p class="series-tag">Class Portfolio • Netflix-Inspired Layout</p>
 
-  <footer>See config.js</footer>
+            <p class="description">
+                Every week is a new episode in my digital fabrication journey.
+            </p>
 
-  <script src="./config.js"></script>
+            <a class="play-button" href="#work">▶ Start Watching</a>
+        </div>
+    </section>
+
+    <section id="final-project">
+        <!-- Put an image or video of your final project here when it's complete! -->
+    </section>
+
+    <section id="work" class="episodes">
+
+        <h2>Episodes</h2>
+
+        <div class="episode-row">
+
+            <a class="episode-card" href="./01_intro/index.html">
+                <div class="episode-number">Episode 1</div>
+                <h3>Week 1: Brainstorming</h3>
+            </a>
+
+            <a class="episode-card" href="./02_2Ddesign/index.html">
+                <div class="episode-number">Episode 2</div>
+                <h3>Week 2: 2D/3D Design</h3>
+            </a>
+
+            <a class="episode-card" href="./03_fabrication/index.html">
+                <div class="episode-number">Episode 3</div>
+                <h3>Week 3: Fabrication</h3>
+            </a>
+
+            <a class="episode-card" href="./04_microcontroller/">
+                <div class="episode-number">Episode 4</div>
+                <h3>Week 4: Programming</h3>
+            </a>
+
+            <a class="episode-card" href="./05_3Dprinting/index.html">
+                <div class="episode-number">Episode 5</div>
+                <h3>Week 5: 3D Printing</h3>
+            </a>
+
+            <a class="episode-card" href="./06_inputs/index.html">
+                <div class="episode-number">Episode 6</div>
+                <h3>Week 6: Inputs</h3>
+            </a>
+
+            <a class="episode-card" href="./07_outputs/index.html">
+                <div class="episode-number">Episode 7</div>
+                <h3>Week 7: Outputs</h3>
+            </a>
+
+            <a class="episode-card" href="./08_cnc/index.html">
+                <div class="episode-number">Episode 8</div>
+                <h3>Week 8: CNC</h3>
+            </a>
+
+            <a class="episode-card" href="./09_networking/index.html">
+                <div class="episode-number">Episode 9</div>
+                <h3>Week 9: Networking</h3>
+            </a>
+
+            <a class="episode-card" href="./10_machine/index.html">
+                <div class="episode-number">Episode 10</div>
+                <h3>Week 10: Machine Building</h3>
+            </a>
+
+            <a class="episode-card finale" href="./13_finalproject/index.html">
+                <div class="episode-number">Final Episode</div>
+                <h3>Final Project</h3>
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>See config.js</footer>
+
+    <script src="./config.js"></script>
+
+</body>
+
 </html>

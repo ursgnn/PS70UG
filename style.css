@@ -346,4 +346,297 @@ p {
 }
 
 
+body {
+  margin: 0;
+  background-color: #141414;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
+nav {
+  background-color: #000;
+  padding: 20px 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e50914;
+}
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(to right, #000 30%, transparent),
+              url("your-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 22px;
+  color: #ddd;
+}
+
+.play-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.play-button:hover {
+  background-color: #e50914;
+  color: white;
+}
+
+.episodes {
+  padding: 40px 60px;
+}
+
+.episode-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.episode-card {
+  background-color: #222;
+  width: 260px;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.episode-card:hover {
+  transform: scale(1.08);
+  background-color: #333;
+}
+
+.episode-number {
+  color: #e50914;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.episode-card h3 {
+  margin: 5px 0;
+}
+
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 50px;
+    display: flex;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.1) 100%),
+        url("./images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #ddd;
+}
+
+.series-tag {
+    color: #bbb;
+    font-size: 18px;
+}
+
+.description {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.play-button {
+    display: inline-block;
+    background-color: #e50914;
+    color: white;
+    padding: 15px 28px;
+    margin-top: 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.play-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.episodes {
+    padding: 40px 55px;
+}
+
+.episodes h2 {
+    font-size: 34px;
+}
+
+.episode-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.episode-card {
+    height: 170px;
+    border-radius: 8px;
+    padding: 18px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.episode-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.65) 45%,
+        rgba(0,0,0,0.15) 100%
+    );
+    z-index: 1;
+}
+
+.episode-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.episode-card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+.episode-number {
+    color: #e50914;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.episode-card h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Episode background images */
+.episode-card:nth-child(1) {
+    background-image: url("./images/week1.jpg");
+}
+
+.episode-card:nth-child(2) {
+    background-image: url("./images/week2.jpg");
+}
+
+.episode-card:nth-child(3) {
+    background-image: url("./images/week3.jpg");
+}
+
+.episode-card:nth-child(4) {
+    background-image: url("./images/week4.jpg");
+}
+
+.episode-card:nth-child(5) {
+    background-image: url("./images/week5.jpg");
+}
+
+.episode-card:nth-child(6) {
+    background-image: url("./images/week6.jpg");
+}
+
+.episode-card:nth-child(7) {
+    background-image: url("./images/week7.jpg");
+}
+
+.episode-card:nth-child(8) {
+    background-image: url("./images/week8.jpg");
+}
+
+.episode-card:nth-child(9) {
+    background-image: url("./images/week9.jpg");
+}
+
+.episode-card:nth-child(10) {
+    background-image: url("./images/week10.jpg");
+}
+
+.episode-card:nth-child(11) {
+    background-image: url("./images/final.jpg");
+}
+
+footer {
+    text-align: center;
+    color: #aaa;
+    padding: 35px;
+}
