@@ -592,11 +592,11 @@ nav a:hover {
 
 /* Episode background images */
 .episode-card:nth-child(1) {
-    background-image: url("./images/week1.jpg");
+    background-image: url("./images/papershredderskechgpt.png");
 }
 
 .episode-card:nth-child(2) {
-    background-image: url("./images/week2.jpg");
+    background-image: url("./images/week2.png");
 }
 
 .episode-card:nth-child(3) {
