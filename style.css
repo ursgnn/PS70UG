@@ -275,17 +275,7 @@ footer a {
   padding: 0vh 7vw;
 }
 
-/* Work */
 
-#work {
-  padding: 0vh 7vw;
-  display: flex;
-  flex-direction: column;
-}
-
-#work a {
-  font-size: clamp(1.4rem, 2.2vw, 100rem);
-}
 
 /* About */
 
