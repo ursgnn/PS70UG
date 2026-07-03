@@ -36,7 +36,7 @@ h1 {
 h2 {
   font-size: clamp(2rem, 3vw, 100rem);
   font-weight: 600;
-  font-style: italic;
+  
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -517,12 +517,15 @@ nav a:hover {
 }
 
 .episodes {
-    padding: 40px 55px;
+    padding: 50px 55px;
 }
 
 .episodes h2 {
-    font-size: 34px;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
+
 
 .episode-row {
     display: grid;
