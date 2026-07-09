@@ -47,3 +47,5 @@ document.querySelector("footer").innerHTML = `
 document.querySelectorAll('#student-name').forEach(el => {
   el.innerHTML = `${config.student_name}`;
 });
+
+

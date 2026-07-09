@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
 
   <nav>
@@ -25,8 +26,43 @@
       <br></br>
       <h2>3D Scanning</h2>
 <br></br>
-<p>The other assignment for this week was to use the photogrammetry to scan an object and get familiar with the app. I chose to scan an empty diet coke bottle that was sitting in our dorm and I thought it would take 5 minutes maximum but it turned out to be a 30 minute process. In the end I had a really good model and I was quite surprised with how it turned out</p>
-      <p>This is the <a href="./Assets/cola.glb" download>download link</a> to the 3D Diet Coke model I captured with the photogrammetry app.</p>
+<p>The other assignment for this week was to use the photogrammetry to scan an object and get familiar with the app. I chose to scan an empty diet coke bottle that was sitting in our dorm and I thought it would take 5 minutes maximum but it turned out to be a 30 minute process. In the end I had a really good model and I was quite surprised with how it turned out.</p>
+
+      <div class="model-box">
+        <model-viewer
+          src="./Assets/cola.glb?v=2"
+          alt="Interactive 3D scan of a Diet Coke bottle"
+          camera-controls
+          touch-action="pan-y"
+          loading="eager"
+          reveal="auto"
+          interaction-prompt="auto"
+          auto-rotate
+          shadow-intensity="1"
+          exposure="1"
+          scale="0.35 0.35 0.35"
+          camera-orbit="30deg 70deg 8cm"
+          min-camera-orbit="auto auto 6cm"
+          max-camera-orbit="auto auto 10cm"
+          field-of-view="45deg">
+          <p class="model-status" slot="poster">Loading 3D model...</p>
+        </model-viewer>
+      </div>
+
+<div id="slideshow1" class="slideshow-container">
+        <div class="slides">
+          <img src="./Assets//coooola.png" width = "600" style="display: block; margin-left: auto; margin-right: auto;" alt="Diet Coke bottle scan">
+          <p class="caption">The scan of the Diet Coke bottle.</p>
+        </div>
+        <div class="slides">
+          <img src="./Assets//IMG_3323.jpeg" width = "450" style="display: block; margin-left: auto; margin-right: auto;" alt="Description">
+          <p class="caption">The photogrammetry setup and result.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+      </div>
+      <p>You can drag the model above to look around it and zoom out a little. This is the <a href="./Assets/cola.glb" download>download link</a> to the 3D Diet Coke model I captured with the photogrammetry app.</p>
     </section>
   </body>
 
