@@ -48,9 +48,9 @@ spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
 const loader = new GLTFLoader().setPath('images/cola.gltf/');
-loader.load('scene.gltf', (gltf) => {
+loader.load('cola.gltf', (gltf) => {
   console.log('loading model');
-  const mesh = gltf.scene;
+  const mesh = gltf.cola;
 
   mesh.traverse((child) => {
     if (child.isMesh) {
