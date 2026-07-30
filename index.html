@@ -33,9 +33,9 @@
     </div>
 
     <nav>
-        <a id="home" href="./index.html">Home</a>
+        <a id="home" class="nav-button" href="./index.html" aria-current="page">Home</a>
         
-        <a href="./about.html">About</a>
+        <a class="nav-button" href="./about.html">About</a>
     </nav>
 
     <section class="hero">
@@ -59,9 +59,24 @@
 
     <section id="work" class="episodes">
 
-        <h2>Episodes</h2>
+        <header class="episodes-heading">
+            <div>
+                <p class="episodes-kicker">The Series</p>
+                <h2>Episodes</h2>
+            </div>
+            <div class="season-controls">
+                <label for="season-selector">Select season</label>
+                <select id="season-selector">
+                    <option value="season-1">Season 1 — Harvard Summer School</option>
+                    <option value="season-2">Season 2 — Personal Projects</option>
+                </select>
+                <p id="season-summary" class="episodes-count" aria-live="polite">
+                    11 chapters <span aria-hidden="true">•</span> Summer 2026
+                </p>
+            </div>
+        </header>
 
-        <div class="episode-row">
+        <div class="episode-row" data-season-panel="season-1">
 
             <a class="episode-card" href="./01_intro/index.html" style="background-image: url('./images/papershredderskechgpt.png')">
                 <div class="episode-number">Episode 1</div>
@@ -120,13 +135,54 @@
 
         </div>
 
+        <div class="episode-row" data-season-panel="season-2" hidden>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 1</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 2</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 3</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 4</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 5</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+            <article class="episode-card episode-card--blank">
+                <span class="blank-card-plus" aria-hidden="true">+</span>
+                <div class="episode-number">Project 6</div>
+                <h3>Untitled Project</h3>
+            </article>
+
+        </div>
+
     </section>
 
     <footer>See config.js</footer>
 
     <script src="./config.js"></script>
     <script src="./intro.js?v=2"></script>
-    <script src="./episode-transition.js?v=8"></script>
+    <script src="./season-selector.js?v=1"></script>
+    <script src="./episode-transition.js?v=9"></script>
 
 </body>
 

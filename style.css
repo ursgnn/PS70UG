@@ -676,6 +676,14 @@ nav a:hover {
 .hero {
     height: 80vh;
     background:
+        linear-gradient(
+            to bottom,
+            transparent 42%,
+            rgba(0,0,0,0.12) 55%,
+            rgba(0,0,0,0.48) 72%,
+            rgba(0,0,0,0.86) 90%,
+            #000 100%
+        ),
         linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.1) 100%),
         url("./images/hero.jpg");
     background-size: cover;
@@ -727,13 +735,98 @@ nav a:hover {
 }
 
 .episodes {
-    padding: 50px 55px;
+    position: relative;
+    margin-top: -2px;
+    padding: 52px 55px 50px;
+    background: #000;
 }
 
-.episodes h2 {
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 60px;
+.episodes-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.episodes-heading .episodes-kicker {
+    margin: 0 0 8px;
+    color: #e50914;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.episodes-heading h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(34px, 3.5vw, 48px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    text-align: left;
+}
+
+.episodes-heading .episodes-count {
+    margin: 0;
+    color: #8f8f8f;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.035em;
+    text-align: right;
+}
+
+.episodes-heading .episodes-count span {
+    margin: 0 7px;
+    color: #e50914;
+}
+
+.season-controls {
+    display: grid;
+    justify-items: end;
+    gap: 7px;
+}
+
+.season-controls label {
+    color: #8f8f8f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.season-controls select {
+    min-height: 44px;
+    max-width: min(340px, 70vw);
+    padding: 0 42px 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9px;
+    background-color: #151515;
+    color: #fff;
+    font: 700 14px "Lato", sans-serif;
+    cursor: pointer;
+    color-scheme: dark;
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease;
+}
+
+.season-controls select:hover {
+    border-color: rgba(229, 9, 20, 0.8);
+    background-color: #1b1b1b;
+}
+
+.season-controls select:focus-visible {
+    border-color: #e50914;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.25);
 }
 
 
@@ -757,6 +850,44 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     transition: 0.3s;
+}
+
+.episode-row[hidden] {
+    display: none;
+}
+
+.episode-card--blank {
+    border: 1px dashed rgba(255, 255, 255, 0.22);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
+        #101010 !important;
+    cursor: default;
+}
+
+.episode-card--blank::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent);
+}
+
+.episode-card--blank:hover {
+    border-color: rgba(229, 9, 20, 0.55);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transform: none;
+}
+
+.blank-card-plus {
+    position: absolute !important;
+    top: 18px;
+    right: 18px;
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1;
 }
 
 .episode-card::before {
@@ -884,4 +1015,161 @@ footer {
     text-align: center;
     color: #aaa;
     padding: 35px;
+}
+
+/* Navigation and footer buttons */
+nav {
+    min-height: 76px;
+    height: auto;
+    padding: 14px clamp(20px, 4vw, 52px);
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(5, 5, 5, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+nav .nav-button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.055);
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+nav .nav-button:hover {
+    border-color: rgba(229, 9, 20, 0.75);
+    background: rgba(229, 9, 20, 0.14);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(229, 9, 20, 0.2);
+    transform: translateY(-2px);
+}
+
+nav .nav-button[aria-current="page"] {
+    border-color: #e50914;
+    background: #e50914;
+    box-shadow: 0 8px 24px rgba(229, 9, 20, 0.3);
+}
+
+nav .nav-button:focus-visible,
+footer .footer-button:focus-visible,
+.play-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+footer {
+    width: 100%;
+    margin-top: clamp(70px, 12vh, 140px);
+    padding: 40px 24px;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: #090909;
+}
+
+footer #contact-info {
+    display: contents;
+}
+
+footer .footer-button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #eee;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+footer .footer-button:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.11);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+footer .footer-button--contact {
+    border-color: #e50914;
+    background: #e50914;
+    color: #fff;
+}
+
+footer .footer-button--contact:hover {
+    border-color: #ff3340;
+    background: #ff1a27;
+}
+
+@media (max-width: 600px) {
+    nav {
+        min-height: 68px;
+        padding: 12px 16px;
+    }
+
+    .episodes {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .episodes-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .season-controls {
+        width: 100%;
+        justify-items: stretch;
+    }
+
+    .season-controls select {
+        width: 100%;
+        max-width: none;
+    }
+
+    .episodes-heading .episodes-count {
+        text-align: left;
+    }
+
+    nav .nav-button {
+        min-height: 42px;
+        padding: 0 17px;
+        font-size: 14px;
+    }
+
+    footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    footer .footer-button {
+        width: min(100%, 320px);
+        margin: 0 auto;
+    }
 }

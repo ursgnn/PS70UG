@@ -1,4 +1,4 @@
-const episodeCards = document.querySelectorAll(".episode-card");
+const episodeCards = document.querySelectorAll(".episode-card[href]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let transitionInProgress = false;
 
