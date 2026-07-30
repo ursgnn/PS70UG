@@ -71,20 +71,43 @@ episodeCards.forEach((card) => {
             window.setTimeout(openEpisode, 1000);
         };
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                expandingCard.classList.add("episode-transition-clone--expanded");
-            });
-        });
-
-        expandingCard.addEventListener(
-            "transitionend",
-            (transitionEvent) => {
-                if (transitionEvent.propertyName === "width") {
-                    scheduleEpisodeOpening();
+        if (typeof expandingCard.animate === "function") {
+            const expansion = expandingCard.animate(
+                [
+                    {
+                        top: `${bounds.top}px`,
+                        left: `${bounds.left}px`,
+                        width: `${bounds.width}px`,
+                        height: `${bounds.height}px`,
+                        borderRadius: cardStyle.borderRadius
+                    },
+                    {
+                        top: "0px",
+                        left: "0px",
+                        width: "100vw",
+                        height: "100vh",
+                        borderRadius: "0px"
+                    }
+                ],
+                {
+                    duration: 650,
+                    easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+                    fill: "forwards"
                 }
-            }
-        );
+            );
+
+            expansion.finished.then(scheduleEpisodeOpening).catch(scheduleEpisodeOpening);
+        } else {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    expandingCard.classList.add("episode-transition-clone--expanded");
+                });
+            });
+
+            expandingCard.addEventListener("transitionend", scheduleEpisodeOpening, {
+                once: true
+            });
+        }
 
         window.setTimeout(scheduleEpisodeOpening, 900);
     });
