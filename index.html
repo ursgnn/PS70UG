@@ -6,10 +6,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        let introAlreadyPlayed = false;
+
+        try {
+            introAlreadyPlayed = Boolean(sessionStorage.getItem("ps70-intro-played"));
+        } catch (error) {
+            introAlreadyPlayed = Boolean(history.state && history.state.ps70IntroPlayed);
+        }
+
+        if (introAlreadyPlayed) {
+            document.documentElement.classList.add("intro-seen");
+        }
+    </script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+
+    <div class="site-intro" aria-hidden="true">
+        <div class="intro-light-field"></div>
+        <div class="intro-medallion">
+            <span class="intro-monogram">UG</span>
+        </div>
+        <p class="intro-caption">Digital Fabrication</p>
+    </div>
 
     <nav>
         <a id="home" href="./index.html">Home</a>
@@ -82,12 +103,12 @@
                 <h3>Week 8: CNC</h3>
             </a>
 
-            <a class="episode-card" href="https://mertsgthub.github.io/PHYS-S-12/09_networking/index.html">
+            <a class="episode-card" href="https://mertsgthub.github.io/PHYS-12/09_networking/index.html">
                 <div class="episode-number">Episode 9</div>
                 <h3>Week 9: Networking</h3>
             </a>
 
-            <a class="episode-card" href="./10_machine/index.html">
+            <a class="episode-card" href="https://claudiamp.github.io/phys-s-12/10_machine/index.html">
                 <div class="episode-number">Episode 10</div>
                 <h3>Week 10: Machine Building</h3>
             </a>
@@ -104,6 +125,8 @@
     <footer>See config.js</footer>
 
     <script src="./config.js"></script>
+    <script src="./intro.js?v=1"></script>
+    <script src="./episode-transition.js?v=6"></script>
 
 </body>
 
