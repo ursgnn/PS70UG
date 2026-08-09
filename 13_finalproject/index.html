@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./final-project.css">
   </head>
 
   <nav>
@@ -14,7 +15,7 @@
   </nav>
 
   <body>
-    <section class="blog">
+    <section class="blog final-project-page">
       <h1>Chromatic Sorter</h1>
 
       <h2>
@@ -32,10 +33,10 @@
         Demo Video
       </h2>
 
-      <video controls preload="metadata" aria-label="Chromatic Sorter demonstration video">
-        Demo video will be added here.
+      <video class="project-demo" controls preload="metadata" aria-label="Chromatic Sorter demonstration video">
+        <source src="./Assets/chromatic-sorter-demo.mov">
       </video>
-      <p class="caption">The final Chromatic Sorter demonstration will be added here.</p>
+      <p class="caption">Demonstration of the Chromatic Sorter mechanism.</p>
 
       <br></br>
       <br></br>
@@ -44,7 +45,14 @@
         Bill of Materials
       </h2>
 
-      <table>
+      <div class="bom-card">
+        <div class="bom-card-header">
+          <p class="bom-eyebrow">System Inventory</p>
+          <p class="bom-summary">A working first draft of the components used to build Chromatic Sorter.</p>
+        </div>
+
+        <div class="bom-table-wrap">
+      <table class="bom-table">
         <thead>
           <tr>
             <th scope="col">Material or Component</th>
@@ -54,10 +62,84 @@
         </thead>
         <tbody>
           <tr>
-            <td colspan="3">Materials list will be added here.</td>
+            <td>Seeed Studio XIAO ESP32C3</td>
+            <td>1</td>
+            <td>Microcontroller and web interface</td>
+          </tr>
+          <tr>
+            <td>TCS3200 color sensor</td>
+            <td>1</td>
+            <td>Detecting the color of the paper</td>
+          </tr>
+          <tr>
+            <td>Stepper motor</td>
+            <td>1</td>
+            <td>Moving the destruction module</td>
+          </tr>
+          <tr>
+            <td>Stepper motor driver</td>
+            <td>1</td>
+            <td>Controlling the stepper motor</td>
+          </tr>
+          <tr>
+            <td>Lead screw and nut</td>
+            <td>1 set</td>
+            <td>Creating controlled vertical movement</td>
+          </tr>
+          <tr>
+            <td>Smooth metal guide rod and bearing</td>
+            <td>1 set</td>
+            <td>Stabilizing the moving mechanism</td>
+          </tr>
+          <tr>
+            <td>3D-printed destructor</td>
+            <td>1</td>
+            <td>Destroying the sorted paper</td>
+          </tr>
+          <tr>
+            <td>3D-printed motor coupler</td>
+            <td>1</td>
+            <td>Connecting the motor to the lead screw</td>
+          </tr>
+          <tr>
+            <td>Laser-cut plywood</td>
+            <td>As needed</td>
+            <td>Box, supports, and motor structure</td>
+          </tr>
+          <tr>
+            <td>Protoboard</td>
+            <td>1</td>
+            <td>Permanent circuit assembly</td>
+          </tr>
+          <tr>
+            <td>Hookup wire and jumper wire</td>
+            <td>As needed</td>
+            <td>Electrical connections</td>
+          </tr>
+          <tr>
+            <td>M3 screws, nuts, and washers</td>
+            <td>As needed</td>
+            <td>Securing the laser-cut and printed parts</td>
+          </tr>
+          <tr>
+            <td>DC power connector and power supply</td>
+            <td>1 set</td>
+            <td>Powering the circuit and motor</td>
+          </tr>
+          <tr>
+            <td>Glue</td>
+            <td>As needed</td>
+            <td>Joining the enclosure and mechanism parts</td>
+          </tr>
+          <tr>
+            <td>Piezo buzzer (removed)</td>
+            <td>1</td>
+            <td>Originally added for sound feedback; removed during troubleshooting</td>
           </tr>
         </tbody>
       </table>
+        </div>
+      </div>
 
       <br></br>
       <br></br>
@@ -74,6 +156,34 @@
         To save time, I used the laser cutter for everything except the destructor. I made some small parts for attaching the destructor to the lead screw with the laser cutter and tapped them for M3 screws so they would remain firm. I then glued the 3D-printed part onto them.
       </p>
 
+      <div id="slideshow1" class="slideshow-container project-slideshow">
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/support-design-one.jpeg" alt="CAD sketch for the lead screw, guide rod, and motor support plate">
+          <p class="caption">The CAD sketch for one of the mechanism support plates.</p>
+        </div>
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/support-design-two.jpeg" alt="CAD sketch showing the hole pattern for another mechanism support plate">
+          <p class="caption">The hole pattern for another laser-cut support.</p>
+        </div>
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/laser-cut-supports.jpeg" alt="Small stacked laser-cut plywood supports held in one hand">
+          <p class="caption">The small laser-cut parts used around the lead screw.</p>
+        </div>
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/motor-assembly.jpeg" alt="Stepper motor, lead screw, guide rod, and laser-cut supports assembled together">
+          <p class="caption">An early assembly of the motor, lead screw, guide rod, and supports.</p>
+        </div>
+        <div class="slides">
+          <video class="project-slide-media" controls preload="metadata">
+            <source src="./Assets/destruction-module-test.mov">
+          </video>
+          <p class="caption">Testing the destruction module with the circuit.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+      </div>
+
       <br></br>
       <br></br>
 
@@ -85,6 +195,9 @@
         After I made the mechanism work and tested it with my circuit, I realized that my box was too tall. It was also frustrating and time-consuming to create circular holes in the box for the destructor and the paper to pass through. I scrapped the old box and made a new one with precut holes, reducing its height from four inches to two inches.
       </p>
 
+      <img class="project-image" src="./Assets/final-mechanism.jpeg" alt="Rebuilt wooden box with the paper destruction mechanism mounted on top">
+      <p class="caption">The redesigned two-inch-tall box with the mechanism mounted on top.</p>
+
       <br></br>
       <br></br>
 
@@ -95,6 +208,24 @@
       <p>
         With the box finished, I moved on to transferring my circuit onto a protoboard. The soldering process went very smoothly, and I was able to complete everything I needed in a short amount of time.
       </p>
+
+      <div id="slideshow2" class="slideshow-container project-slideshow">
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/soldering-process.jpeg" alt="Protoboard circuit being soldered at a workbench">
+          <p class="caption">Soldering the circuit onto the protoboard.</p>
+        </div>
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/protoboard-closeup.jpeg" alt="Close-up of the completed protoboard with the color sensor, motor driver, and XIAO">
+          <p class="caption">A close-up of the completed protoboard circuit.</p>
+        </div>
+        <div class="slides">
+          <img class="project-slide-media" src="./Assets/protoboard-installed.jpeg" alt="Protoboard circuit installed inside the wooden enclosure">
+          <p class="caption">The protoboard installed inside the box.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+      </div>
 
       <br></br>
       <br></br>
@@ -110,6 +241,9 @@
       <p>
         This was a major setback because I knew there was a problem, but I did not know its source. I asked my TAs for help, and we examined the circuit for two hours before finally finding the issue. The buzzer, which I had added because I thought it would be a harmless and cool addition, was causing the components to fry because of its voltage requirements. We had not even thought to check it. After this huge setback, I regained my focus and finally finished the circuit.
       </p>
+
+      <img class="project-image" src="./Assets/buzzer.jpeg" alt="Small black piezo buzzer held in front of the project workbench">
+      <p class="caption">The buzzer that caused the unexpected electrical problem.</p>
 
       <br></br>
       <br></br>
@@ -136,11 +270,91 @@
       <p>
         This project taught me a lot about both the physical and mental processes of building things. Despite all of the problems and setbacks, everything turned out really well in the end.
       </p>
+
+      <img class="project-image" src="./Assets/final-showcase.jpeg" alt="Chromatic Sorter and its website displayed at the final project showcase">
+      <p class="caption">The completed Chromatic Sorter at the final project showcase.</p>
+
+      <br></br>
+      <br></br>
+
+      <section class="credits-launch" aria-labelledby="end-credits-heading">
+        <p class="credits-launch-kicker">Final Sequence</p>
+        <h2 id="end-credits-heading">One Last Thing</h2>
+        <button id="play-final-credits" class="credits-play" type="button">
+          <span aria-hidden="true">▶</span>
+          Play End Credits
+        </button>
+      </section>
     </section>
+
+    <div id="end-credits" class="end-credits" role="dialog" aria-modal="true" aria-labelledby="credits-title" aria-hidden="true" tabindex="-1">
+      <div class="credits-light-field" aria-hidden="true"></div>
+
+      <div class="credits-stage">
+        <div class="credits-roll">
+          <section class="credit-block credit-opening">
+            <p class="credit-role">Uras Gonen Presents</p>
+            <h2 id="credits-title">Chromatic <span>Sorter</span></h2>
+            <p class="credit-detail">A PS70 Final Project</p>
+          </section>
+
+          <section class="credit-block">
+            <p class="credit-role">Instructor</p>
+            <p class="credit-name">Nathan Melenbrink</p>
+          </section>
+
+          <section class="credit-block">
+            <p class="credit-role">Teaching Assistants</p>
+            <p class="credit-name">Victor Lee</p>
+            <p class="credit-name">Hannah Reuter</p>
+          </section>
+
+          <section class="credit-block">
+            <p class="credit-role">Lab Staff</p>
+            <p class="credit-name">Jonathan Buchanan</p>
+          </section>
+
+          <section class="credit-block">
+            <p class="credit-role">Classmates</p>
+            <p class="credit-name credit-name--wide">The PS70 Summer 2026 Class</p>
+            <p class="credit-detail">For seven weeks of building together</p>
+          </section>
+
+          <section class="credit-block credit-tools">
+            <p class="credit-role">The Lab Ensemble</p>
+            <p class="credit-name credit-name--wide">Every Tool That Made It Possible</p>
+            <div class="credit-tool-list">
+              <span>Laser Cutters</span>
+              <span>3D Printers</span>
+              <span>Soldering Irons</span>
+              <span>Multimeters</span>
+              <span>Oscilloscopes</span>
+              <span>CNC Machines</span>
+              <span>Hand Tools</span>
+              <span>Breadboards</span>
+              <span>Protoboards</span>
+              <span>Every Wire, Screw, and Coupler</span>
+            </div>
+          </section>
+
+          <section class="credit-block">
+            <p class="credit-role">Website Design</p>
+            <p class="credit-name">ChatGPT</p>
+          </section>
+
+          <section class="credit-block credit-final">
+            <p class="credit-role">Created, Designed &amp; Built By</p>
+            <p class="credit-final-name">Uras Gonen</p>
+            <p class="credit-detail">Chromatic Sorter <span aria-hidden="true">•</span> Summer 2026</p>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 
   <footer>See config.js</footer>
 
   <script src="../config.js"></script>
   <script src="../slideshow.js"></script>
+  <script src="./final-credits.js"></script>
 </html>

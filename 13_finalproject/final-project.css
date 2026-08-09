@@ -1,0 +1,439 @@
+.episode-page .final-project-page > .project-demo {
+  width: min(100%, 38rem) !important;
+  max-height: 24rem;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #090909;
+}
+
+.final-project-page .project-slideshow {
+  width: min(100%, 34rem);
+  padding: 12px;
+}
+
+.episode-page .final-project-page .project-slide-media {
+  display: block;
+  width: 100% !important;
+  height: 27rem !important;
+  max-height: min(66vh, 27rem);
+  margin: 0 auto !important;
+  border: 0;
+  border-radius: 10px;
+  background: #090909;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.episode-page .final-project-page > .project-image {
+  display: block;
+  width: min(100%, 31rem) !important;
+  height: auto;
+  max-height: 29rem;
+  object-fit: contain;
+  background: #090909;
+}
+
+.final-project-page .project-slideshow .caption {
+  min-height: 2.6rem;
+  margin-bottom: 4px;
+}
+
+.bom-card {
+  width: min(100%, 58rem);
+  margin: 2rem 0 4rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(229, 9, 20, 0.08), transparent 30%),
+    #111;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+}
+
+.final-project-page .bom-card-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 1.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.final-project-page .bom-card-header .bom-eyebrow {
+  width: auto;
+  margin: 0;
+  color: #e50914;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.final-project-page .bom-card-header .bom-summary {
+  width: min(100%, 29rem);
+  margin: 0;
+  color: #9e9e9e;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.bom-table-wrap {
+  overflow-x: auto;
+  scrollbar-color: #e50914 #171717;
+}
+
+.final-project-page .bom-table {
+  width: 100%;
+  min-width: 44rem;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.final-project-page .bom-table th,
+.final-project-page .bom-table td {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  padding: 0.9rem 1.2rem;
+  vertical-align: middle;
+}
+
+.final-project-page .bom-table th {
+  background: rgba(255, 255, 255, 0.045);
+  color: #f0f0f0;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.final-project-page .bom-table td {
+  color: #bcbcbc;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.final-project-page .bom-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.final-project-page .bom-table tbody tr:hover {
+  background: rgba(229, 9, 20, 0.075);
+}
+
+.final-project-page .bom-table td:first-child {
+  color: #f0f0f0;
+  font-weight: 750;
+}
+
+.final-project-page .bom-table th:nth-child(2),
+.final-project-page .bom-table td:nth-child(2) {
+  width: 7rem;
+  color: #ff5962;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.final-project-page .bom-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.credits-launch {
+  position: relative;
+  width: min(100%, 58rem);
+  margin: 7rem 0 2rem;
+  padding: clamp(2.75rem, 6vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 115%, rgba(229, 9, 20, 0.23), transparent 42%),
+    #090909;
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.52);
+  text-align: center;
+}
+
+.credits-launch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.035), transparent 70%);
+  pointer-events: none;
+}
+
+.final-project-page .credits-launch .credits-launch-kicker {
+  position: relative;
+  width: auto;
+  margin: 0 0 0.75rem;
+  color: #e50914;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.final-project-page .credits-launch h2 {
+  position: relative;
+  margin: 0 0 2rem;
+  padding: 0;
+  color: #fff;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-align: center;
+}
+
+.final-project-page .credits-launch h2::before {
+  display: none;
+}
+
+.credits-play {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding: 0 1.45rem;
+  border: 0;
+  border-radius: 6px;
+  background: #e50914;
+  color: #fff;
+  font: 900 0.8rem "Lato", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(229, 9, 20, 0.28);
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.credits-play:hover,
+.credits-play:focus-visible {
+  background: #ff1f2b;
+  outline: none;
+  box-shadow: 0 16px 34px rgba(229, 9, 20, 0.38);
+  transform: translateY(-2px);
+}
+
+.credits-are-playing {
+  overflow: hidden;
+}
+
+.end-credits {
+  position: fixed;
+  inset: 0;
+  z-index: 30000;
+  overflow: hidden;
+  visibility: hidden;
+  background: #000;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 450ms ease, visibility 0s linear 450ms;
+}
+
+.end-credits--active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 450ms ease;
+}
+
+.end-credits--ending {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1100ms ease;
+}
+
+.credits-light-field {
+  position: absolute;
+  inset: -30%;
+  background:
+    repeating-linear-gradient(88deg, transparent 0 12%, rgba(229, 9, 20, 0.035) 12.5%, transparent 13% 24%),
+    radial-gradient(circle at 50% 45%, rgba(229, 9, 20, 0.12), transparent 30%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.credits-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #000 0%, transparent 13%, transparent 82%, #000 100%),
+    radial-gradient(circle, transparent 35%, rgba(0, 0, 0, 0.68) 100%);
+}
+
+.credits-roll {
+  position: relative;
+  z-index: 2;
+  width: min(88vw, 62rem);
+  margin: 0 auto;
+  padding: 16vh 0 12vh;
+  text-align: center;
+  will-change: transform;
+}
+
+.credits-roll--playing {
+  animation: roll-final-credits 32s linear forwards;
+}
+
+.credit-block {
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.credit-role,
+.credit-name,
+.credit-detail,
+.credit-final-name {
+  margin: 0;
+  text-align: center;
+}
+
+.credit-role {
+  margin-bottom: 1rem;
+  color: #e50914;
+  font-size: clamp(0.65rem, 1vw, 0.82rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.credit-name {
+  margin: 0.18rem 0;
+  color: #f6f6f6;
+  font-size: clamp(2.1rem, 5vw, 4.6rem);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.credit-name--wide {
+  font-size: clamp(1.8rem, 4.2vw, 3.7rem);
+}
+
+.credit-detail {
+  margin-top: 1.25rem;
+  color: #858585;
+  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  font-weight: 650;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.credit-opening h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.5rem, 10vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.credit-opening h2 span {
+  display: block;
+  color: #e50914;
+}
+
+.credit-tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 1.35rem;
+  max-width: 48rem;
+  margin-top: 2rem;
+  color: #a8a8a8;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.credit-final {
+  min-height: 58vh;
+}
+
+.credit-final-name {
+  color: #fff;
+  font-size: clamp(4.3rem, 13vw, 11rem);
+  font-weight: 900;
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+  text-shadow: 0 0 55px rgba(229, 9, 20, 0.2);
+}
+
+@keyframes roll-final-credits {
+  0% {
+    transform: translateY(100vh);
+  }
+  82% {
+    transform: translateY(calc(-100% + 80vh));
+  }
+  100% {
+    transform: translateY(calc(-100% + 80vh));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .end-credits {
+    overflow-y: auto;
+  }
+
+  .credits-stage {
+    position: relative;
+    overflow: visible;
+  }
+
+  .credits-roll,
+  .credits-roll--playing {
+    padding-top: 7rem;
+    animation: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .episode-page .final-project-page > .project-demo {
+    width: 100% !important;
+  }
+
+  .final-project-page .project-slideshow {
+    width: 100%;
+  }
+
+  .episode-page .final-project-page .project-slide-media {
+    height: 72vw !important;
+    max-height: 24rem;
+  }
+
+  .episode-page .final-project-page > .project-image {
+    width: min(100%, 27rem) !important;
+    max-height: 25rem;
+  }
+
+  .final-project-page .bom-card-header {
+    display: block;
+    padding: 1.2rem;
+  }
+
+  .final-project-page .bom-card-header .bom-summary {
+    margin-top: 0.65rem;
+    text-align: left;
+  }
+
+}
