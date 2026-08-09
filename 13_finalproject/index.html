@@ -15,12 +15,127 @@
 
   <body>
     <section class="blog">
-      <h1>Final Project</h1>
-      
+      <h1>Chromatic Sorter</h1>
+
+      <h2>
+        Building Beyond the MVP
+      </h2>
+
       <p>
-        This is where you'll document your final project. Be sure to include a video demonstrating your project and a bill of materials. Good documentation should explain your entire build process such that someone reading your documentation could recreate your entire project from scratch. See the PS70 website for examples.
+        After the MVP, I still had a long way to go. The first thing I wanted to do was create the paper destruction module, which was the stepper motor setup.
       </p>
-      
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Demo Video
+      </h2>
+
+      <video controls preload="metadata" aria-label="Chromatic Sorter demonstration video">
+        Demo video will be added here.
+      </video>
+      <p class="caption">The final Chromatic Sorter demonstration will be added here.</p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Bill of Materials
+      </h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Material or Component</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3">Materials list will be added here.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Paper Destruction Module
+      </h2>
+
+      <p>
+        I first built templates to stabilize the metal rod and the stepper motor. I also created a place for the rod to go into the box so it would remain stable. For the destruction part, I made a design that looked like a nuke and 3D printed it. Some of the curves were too thin, so the print broke. I printed it again with supports that I designed myself.
+      </p>
+
+      <p>
+        To save time, I used the laser cutter for everything except the destructor. I made some small parts for attaching the destructor to the lead screw with the laser cutter and tapped them for M3 screws so they would remain firm. I then glued the 3D-printed part onto them.
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Redesigning the Box
+      </h2>
+
+      <p>
+        After I made the mechanism work and tested it with my circuit, I realized that my box was too tall. It was also frustrating and time-consuming to create circular holes in the box for the destructor and the paper to pass through. I scrapped the old box and made a new one with precut holes, reducing its height from four inches to two inches.
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Transferring the Circuit
+      </h2>
+
+      <p>
+        With the box finished, I moved on to transferring my circuit onto a protoboard. The soldering process went very smoothly, and I was able to complete everything I needed in a short amount of time.
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Finding the Electrical Problem
+      </h2>
+
+      <p>
+        After the soldering process, the biggest problems started. When I first tested the board, the stepper motor did not move, and my XIAO began getting hot very quickly. I was scared that it would fry, so I used a multimeter to test every connection. Everything seemed normal, but when I started the circuit again, my XIAO fried.
+      </p>
+
+      <p>
+        This was a major setback because I knew there was a problem, but I did not know its source. I asked my TAs for help, and we examined the circuit for two hours before finally finding the issue. The buzzer, which I had added because I thought it would be a harmless and cool addition, was causing the components to fry because of its voltage requirements. We had not even thought to check it. After this huge setback, I regained my focus and finally finished the circuit.
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Solving the Friction Problem
+      </h2>
+
+      <p>
+        Even after the circuit was finished, the motor was not turning. To test it, I removed every extension I had made. When it was reduced to a simple stepper motor, it moved perfectly. I then realized that the motor would not move when it was attached to the laser-cut parts because there was too much friction.
+      </p>
+
+      <p>
+        Instead of using three reinforcement parts, I used one large support. This reduced the friction and later helped me stabilize the motor on top of the machine.
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        What I Learned
+      </h2>
+
+      <p>
+        This project taught me a lot about both the physical and mental processes of building things. Despite all of the problems and setbacks, everything turned out really well in the end.
+      </p>
     </section>
   </body>
 

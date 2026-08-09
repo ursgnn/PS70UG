@@ -16,14 +16,103 @@
   <body>
     <section class="blog">
       <h1>Week 7: Outputs</h1>
-      
-      <p>
-        Document your minimum viable project either here or in the <a href="../13_finalproject/index.html">Final Project tab</a>.
-      </p>
+
+      <h2>
+        Minimum Viable Product
+      </h2>
 
       <p>
-        Create a microcontroller program that integrates an input and output device, using the C++ class structure and avoiding the <code>delay()</code> function. Use the oscilliscope to measure the signals on one of the pins of your output device.
+        For the MVP, I wanted to experiment with and figure out the mechanical side of my final project, but I mainly focused on circuit building. Before all of that, I thought it would be best to build my box first so I could store everything I was going to use inside it. The box design was taken from the internet, and it turned out pretty well.
       </p>
+
+      <div id="slideshow1" class="slideshow-container">
+        <div class="slides">
+          <img src="./Assets/mvp-box-design.jpeg" width="420" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" alt="Finger-jointed box panels laid out in Fusion 360">
+          <p class="caption">This was the box design before I started fabrication.</p>
+        </div>
+        <div class="slides">
+          <img src="./Assets/mvp-box-assembly.jpeg" width="420" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" alt="Laser-cut wooden box being assembled on a workbench">
+          <p class="caption">This was the box while I was assembling the laser-cut pieces.</p>
+        </div>
+        <div class="slides">
+          <video controls preload="metadata" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+            <source src="./Assets/mvp-box-demo.mp4" type="video/mp4">
+          </video>
+          <p class="caption">This video shows the completed box.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+      </div>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Color Sensor
+      </h2>
+
+      <p>
+        I bought a TCS3200 color sensor from Amazon and started building my circuit. I had no problems building the circuit on a breadboard, and the color sensor was working just fine until I accidentally burned it out. I had to buy a new one and repeat the process of calibrating the sensor, which easily took the most time. In the end, I was able to pull it off.
+      </p>
+
+      <div id="slideshow2" class="slideshow-container">
+        <div class="slides">
+          <img src="./Assets/mvp-color-sensor.jpeg" width="420" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" alt="TCS3200 color sensor mounted on a breadboard">
+          <p class="caption">This was the replacement TCS3200 color sensor before I wired and calibrated it.</p>
+        </div>
+        <div class="slides">
+          <img src="./Assets/mvp-breadboard-prototype.jpeg" width="420" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" alt="Color sensor, buzzer, and motor circuit assembled across two breadboards">
+          <p class="caption">This was the circuit while I was testing the components across two breadboards.</p>
+        </div>
+        <div class="slides">
+          <video controls preload="metadata" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+            <source src="./Assets/mvp-color-calibration.mov" type="video/mp4">
+          </video>
+          <p class="caption">This video shows the color-sensor calibration process.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+      </div>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        Stepper Motor and Buzzer
+      </h2>
+
+      <p>
+        After the color sensor was done, I started working on my stepper motor. I 3D printed different sizes of couplers and found one that fit perfectly with my stepper motor and lead screw. After I wired the motor, I also wanted to add a buzzer because it would enhance the project and be effortless and easy to implement (foreshadowing).
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h2>
+        MVP Result
+      </h2>
+
+      <p>
+        The last thing I did was make everything fit on one breadboard instead of using two. This would help when I started soldering everything onto the protoboard. At the end of the MVP process, I had a box, a working color sensor, an RGB light, a buzzer, a working website to control the circuit, and a working stepper motor with a coupler.
+      </p>
+
+      <div id="slideshow3" class="slideshow-container">
+        <div class="slides">
+          <video controls preload="metadata" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+            <source src="./Assets/mvp-system-test.mov" type="video/mp4">
+          </video>
+          <p class="caption">This video shows the color sensor, motor, buzzer, and website working together.</p>
+        </div>
+        <div class="slides">
+          <img src="./Assets/mvp-final-circuit.jpeg" width="420" style="width: 420px; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" alt="MVP circuit assembled on one breadboard with the color sensor and buzzer">
+          <p class="caption">This was my completed MVP circuit after fitting everything onto one breadboard.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
+      </div>
     </section>
   </body>
 
